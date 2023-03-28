@@ -11,5 +11,9 @@
   },
   "dependencies": {
     "astro": "^2.1.7"
+  },
+  "volta": {
+    "node": "18.15.0",
+    "yarn": "3.5.0"
   }
 }
