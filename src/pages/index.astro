@@ -2,10 +2,11 @@
 ---
 
 <script>
-  import { getDeviceToken } from '@/infrastructures/firebase/messaging';
-
-  const token = await getDeviceToken();
-  console.log(token);
+  const onRegisterNotification = async () => {
+    const { registerNotification } = await import('@/libs/notification');
+    registerNotification();
+  };
+  document.getElementById('registerNotification')?.addEventListener('click', onRegisterNotification);
 </script>
 
 <html lang="ja">
@@ -18,5 +19,6 @@
   </head>
   <body>
     <h1>Astro</h1>
+    <button id="registerNotification">Push通知を受け取る</button>
   </body>
 </html>

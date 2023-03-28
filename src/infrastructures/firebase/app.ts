@@ -1,5 +1,6 @@
 import { getApp, getApps, initializeApp } from 'firebase/app';
 import { getMessaging } from 'firebase/messaging';
+import { getFirestore } from 'firebase/firestore';
 
 console.log('initialize Firebase');
 const app = !getApps().length
@@ -14,5 +15,6 @@ const app = !getApps().length
   : getApp();
 
 const messaging = getMessaging(app);
+const firestore = getFirestore(app);
 
-export { messaging };
+export { messaging, firestore };
