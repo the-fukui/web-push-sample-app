@@ -1,12 +1,14 @@
 ---
 ---
 
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" defer=""></script>
 <script>
-  // const onRegisterNotification = async () => {
-  //   const { registerNotification } = await import('@/libs/notification');
-  //   registerNotification();
-  // };
-  // document.getElementById('registerNotification')?.addEventListener('click', onRegisterNotification);
+  window.OneSignal = window.OneSignal || [];
+  window.OneSignal.push(function () {
+    window.OneSignal.init({
+      appId: '6717c7aa-5eb7-4e01-9edd-28892a25aeef',
+    });
+  });
 </script>
 
 <html lang="ja">
@@ -19,6 +21,6 @@
   </head>
   <body>
     <h1>Astro</h1>
-    <button id="registerNotification">Push通知を受け取る</button>
+    <div class="onesignal-customlink-container"></div>
   </body>
 </html>
